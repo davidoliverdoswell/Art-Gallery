@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaintingController: UIViewController {
+class PaintingController {
     
     var paintings : [Painting] = []
     
@@ -26,7 +26,7 @@ class PaintingController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    init() {
         loadPaintingsFromAssets()
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaintingListViewController: UIViewController, UITableViewDataSource {
+class PaintingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,7 +17,6 @@ class PaintingListViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        paintingController.loadPaintingsFromAssets()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,8 +27,8 @@ class PaintingListViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PaintingTableViewCell
         
         let painting = paintingController.paintings[indexPath.row]
-        cell.artImage.image = painting.image
-        
+        cell.painting = painting
+    
         return cell
     }
 
