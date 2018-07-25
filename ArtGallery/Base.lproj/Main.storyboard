@@ -56,6 +56,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artImage" destination="yD2-CH-4Qd" id="ln3-sE-qaN"/>
+                                            <outlet property="isLikedText" destination="dle-da-1XO" id="Dju-7B-O0b"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -23,7 +23,6 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +35,7 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, UITab
         let painting = paintingController.paintings[indexPath.row]
         cell.painting = painting
         cell.delegate = self
-    
+        
         return cell
     }
 

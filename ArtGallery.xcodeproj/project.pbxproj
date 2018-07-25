@@ -65,8 +65,8 @@
 				469AAC41210258C200C0D421 /* AppDelegate.swift */,
 				469AAC4D210258C300C0D421 /* Info.plist */,
 				A6914401210906DD00BAE841 /* Model */,
-				A6914403210906EB00BAE841 /* Controllers */,
 				A6914402210906E600BAE841 /* Views */,
+				A6914403210906EB00BAE841 /* Controllers */,
 			);
 			path = ArtGallery;
 			sourceTree = "<group>";
