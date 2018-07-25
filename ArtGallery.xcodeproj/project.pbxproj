@@ -14,6 +14,7 @@
 		A69144052109073400BAE841 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69144042109073400BAE841 /* Painting.swift */; };
 		A69144072109093800BAE841 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69144062109093800BAE841 /* PaintingController.swift */; };
 		A691440921091EC100BAE841 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691440821091EC100BAE841 /* PaintingTableViewCell.swift */; };
+		A691440B2109213C00BAE841 /* PaintingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691440A2109213C00BAE841 /* PaintingListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A69144042109073400BAE841 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		A69144062109093800BAE841 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 		A691440821091EC100BAE841 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
+		A691440A2109213C00BAE841 /* PaintingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				A69144062109093800BAE841 /* PaintingController.swift */,
+				A691440A2109213C00BAE841 /* PaintingListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A691440B2109213C00BAE841 /* PaintingListViewController.swift in Sources */,
 				469AAC42210258C200C0D421 /* AppDelegate.swift in Sources */,
 				A69144072109093800BAE841 /* PaintingController.swift in Sources */,
 				A69144052109073400BAE841 /* Painting.swift in Sources */,

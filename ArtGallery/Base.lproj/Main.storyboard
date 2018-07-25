@@ -14,7 +14,7 @@
         <!--Art Gallery-->
         <scene sceneID="li4-VB-phy">
             <objects>
-                <viewController id="KfW-nw-VMx" customClass="PaintingController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KfW-nw-VMx" customClass="PaintingListViewController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSW-lZ-wiI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +67,9 @@
                         <viewLayoutGuide key="safeArea" id="LbA-ru-zas"/>
                     </view>
                     <navigationItem key="navigationItem" title="Art Gallery" id="cmO-fq-a45"/>
+                    <connections>
+                        <outlet property="tableView" destination="YyE-Hk-AfE" id="A5P-Hc-8vo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNh-Ks-Yal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
