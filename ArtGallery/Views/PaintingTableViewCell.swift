@@ -29,9 +29,8 @@ class PaintingTableViewCell: UITableViewCell {
     }
     
     func updateViews() {
-        
+        guard let painting = painting else { return }
+        artImage.image = painting.image
     }
-    
-    
     
 }

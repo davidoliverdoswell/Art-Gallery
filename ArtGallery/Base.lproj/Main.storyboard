@@ -34,7 +34,10 @@
                                                     <rect key="frame" x="66" y="58" width="242" height="258"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dle-da-1XO">
-                                                    <rect key="frame" x="164" y="324" width="46" height="30"/>
+                                                    <rect key="frame" x="137" y="324" width="100" height="47"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="wvf-0L-dEY"/>
+                                                    </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="likeButton:" destination="ei1-EW-Ggd" eventType="touchUpInside" id="nYb-7q-fb9"/>
@@ -43,11 +46,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="yD2-CH-4Qd" firstAttribute="centerY" secondItem="cC0-XF-2wc" secondAttribute="centerY" id="0DW-dN-9lu"/>
+                                                <constraint firstItem="dle-da-1XO" firstAttribute="top" secondItem="yD2-CH-4Qd" secondAttribute="bottom" constant="8" symbolic="YES" id="1oa-Jf-XLo"/>
                                                 <constraint firstItem="yD2-CH-4Qd" firstAttribute="top" secondItem="cC0-XF-2wc" secondAttribute="topMargin" constant="47" id="aw5-Sk-IgX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dle-da-1XO" secondAttribute="bottom" constant="-7" id="cFq-v7-CNk"/>
                                                 <constraint firstItem="yD2-CH-4Qd" firstAttribute="centerX" secondItem="cC0-XF-2wc" secondAttribute="centerX" id="gVC-Oo-3i7"/>
                                                 <constraint firstItem="yD2-CH-4Qd" firstAttribute="leading" secondItem="cC0-XF-2wc" secondAttribute="leadingMargin" constant="51" id="sJz-cO-xtd"/>
-                                                <constraint firstItem="dle-da-1XO" firstAttribute="centerX" secondItem="yD2-CH-4Qd" secondAttribute="centerX" id="saY-oI-AEK"/>
-                                                <constraint firstItem="dle-da-1XO" firstAttribute="top" secondItem="yD2-CH-4Qd" secondAttribute="bottom" constant="8" symbolic="YES" id="vfQ-iL-rPw"/>
+                                                <constraint firstItem="dle-da-1XO" firstAttribute="centerX" secondItem="yD2-CH-4Qd" secondAttribute="centerX" id="w32-GN-pEf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
