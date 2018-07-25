@@ -1,30 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KfW-nw-VMx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qiU-wj-mWq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Painting Controller-->
+        <!--Art Gallery-->
         <scene sceneID="li4-VB-phy">
             <objects>
                 <viewController id="KfW-nw-VMx" customClass="PaintingController" customModule="ArtGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSW-lZ-wiI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YyE-Hk-AfE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="375" id="ei1-EW-Ggd" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ei1-EW-Ggd" id="cC0-XF-2wc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yD2-CH-4Qd">
+                                                    <rect key="frame" x="66" y="58" width="242" height="258"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dle-da-1XO">
+                                                    <rect key="frame" x="164" y="324" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="likeButton:" destination="ei1-EW-Ggd" eventType="touchUpInside" id="nYb-7q-fb9"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yD2-CH-4Qd" firstAttribute="centerY" secondItem="cC0-XF-2wc" secondAttribute="centerY" id="0DW-dN-9lu"/>
+                                                <constraint firstItem="yD2-CH-4Qd" firstAttribute="top" secondItem="cC0-XF-2wc" secondAttribute="topMargin" constant="47" id="aw5-Sk-IgX"/>
+                                                <constraint firstItem="yD2-CH-4Qd" firstAttribute="centerX" secondItem="cC0-XF-2wc" secondAttribute="centerX" id="gVC-Oo-3i7"/>
+                                                <constraint firstItem="yD2-CH-4Qd" firstAttribute="leading" secondItem="cC0-XF-2wc" secondAttribute="leadingMargin" constant="51" id="sJz-cO-xtd"/>
+                                                <constraint firstItem="dle-da-1XO" firstAttribute="centerX" secondItem="yD2-CH-4Qd" secondAttribute="centerX" id="saY-oI-AEK"/>
+                                                <constraint firstItem="dle-da-1XO" firstAttribute="top" secondItem="yD2-CH-4Qd" secondAttribute="bottom" constant="8" symbolic="YES" id="vfQ-iL-rPw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artImage" destination="yD2-CH-4Qd" id="ln3-sE-qaN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YyE-Hk-AfE" firstAttribute="bottom" secondItem="LbA-ru-zas" secondAttribute="bottom" id="EJR-K9-rGi"/>
+                            <constraint firstAttribute="trailing" secondItem="YyE-Hk-AfE" secondAttribute="trailing" id="Pch-Yp-QHg"/>
+                            <constraint firstItem="YyE-Hk-AfE" firstAttribute="leading" secondItem="dSW-lZ-wiI" secondAttribute="leading" id="V9T-w3-zVW"/>
+                            <constraint firstItem="YyE-Hk-AfE" firstAttribute="top" secondItem="LbA-ru-zas" secondAttribute="top" id="Y7c-q2-XEv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LbA-ru-zas"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cmO-fq-a45"/>
+                    <navigationItem key="navigationItem" title="Art Gallery" id="cmO-fq-a45"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNh-Ks-Yal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="15"/>
+            <point key="canvasLocation" x="1396" y="14.842578710644679"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uj1-DK-gcO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qiU-wj-mWq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1i4-gv-V0C">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KfW-nw-VMx" kind="relationship" relationship="rootViewController" id="ElQ-CW-42f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYq-ed-rNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="14.842578710644679"/>
         </scene>
     </scenes>
 </document>

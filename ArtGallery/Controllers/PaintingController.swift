@@ -22,6 +22,10 @@ class PaintingController: UIViewController {
         }
     }
     
+    func toggleIsLiked(for painting: Painting) {
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         loadPaintingsFromAssets()
     }
